@@ -53,20 +53,21 @@ print("Mean Squared Error:", mse)
 print("\nPredictions:\n", Y_pred[:5])
 
 ## Output:
-```
+
 ![multivariate linear regression model for predicting the price of the house and number of occupants in the house](sam.png)
-<img width="755" height="130" alt="Screenshot 2025-11-27 083519" src="https://github.com/user-attachments/assets/4e963860-a18a-4c8d-8bd2-7c108e980f41" />
+
+<img width="755" height="130" alt="Screenshot 2025-11-27 083519" src="https://github.com/user-attachments/assets/4024376e-6ea8-4a0d-b800-021f514b3686" />
+
+<img width="284" height="149" alt="Screenshot 2025-11-27 083527" src="https://github.com/user-attachments/assets/2f651c05-b019-427d-90dd-e51b1b766f9c" />
 
 
-<img width="284" height="149" alt="Screenshot 2025-11-27 083527" src="https://github.com/user-attachments/assets/c8f01bf3-e992-4384-a940-0156baa5bf4c" />
+<img width="344" height="133" alt="Screenshot 2025-11-27 083544" src="https://github.com/user-attachments/assets/5c2cca22-84a4-4e29-961f-abd3c4b52601" />
 
 
-<img width="344" height="133" alt="Screenshot 2025-11-27 083544" src="https://github.com/user-attachments/assets/7675b73f-7fbe-4bd1-b78e-65643ba84d2a" />
+<img width="373" height="178" alt="Screenshot 2025-11-27 083558" src="https://github.com/user-attachments/assets/11f8ad0d-1c3d-4e25-b13a-35d2e8403260" />
 
 
-<img width="373" height="178" alt="Screenshot 2025-11-27 083558" src="https://github.com/user-attachments/assets/e55ba3a4-182f-4347-b1be-7ab40c74bbab" />
 
-```
 
 ## Result:
 Thus the program to implement the multivariate linear regression model for predicting the price of the house and number of occupants in the house with SGD regressor is written and verified using python programming.

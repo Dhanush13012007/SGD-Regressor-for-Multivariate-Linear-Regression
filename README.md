@@ -37,33 +37,36 @@ x_train, x_test, y_train,y_test = train_test_split(x,y, test_size = 0.2, random_
 scaler_x = StandardScaler()
 scaler_y = StandardScaler()
 
-scaler_y = StandardScaler()
-x_train = scaler_x.fit_transform(x_train)
-x_test = scaler_x.fit_transform(x_test)
-y_train = scaler_y.fit_transform(y_train)
-y_test = scaler_y.fit_transform(y_test)
+X_train = scaler_X.fit_transform(X_train)
+X_test = scaler_X.transform(X_test)
+Y_train = scaler_Y.fit_transform(Y_train)
+Y_test = scaler_Y.transform(Y_test)
 
-sgd = SGDRegressor(max_iter=1000, tol = 1e-3)
-multi_output_sgd= MultiOutputRegressor(sgd)
-multi_output_sgd.fit(x_train, y_train)
+sgd = SGDRegressor(max_iter=1000, tol=1e-3)
+multi_output_sgd = MultiOutputRegressor(sgd)
+multi_output_sgd.fit(X_train, Y_train)
 
-y_pred =multi_output_sgd.predict(x_test)
-y_pred = scaler_y.inverse_transform(y_pred)
-y_test = scaler_y.inverse_transform(y_test)
-print(y_pred)
-
-mse = mean_squared_error(y_test,y_pred)
-print("Mean Squared Error:",mse)
-print("\nPredictions:\n",y_pred[:5])
-
+Y_pred = multi_output_sgd.predict(X_test)
+Y_pred = scaler_Y.inverse_transform(Y_pred)
+mse = mean_squared_error(Y_test, Y_pred)
+print("Mean Squared Error:", mse)
+print("\nPredictions:\n", Y_pred[:5])
 
 ## Output:
+```
 ![multivariate linear regression model for predicting the price of the house and number of occupants in the house](sam.png)
-<img width="277" height="153" alt="Screenshot 2025-11-21 133316" src="https://github.com/user-attachments/assets/f27219bc-953c-4fb4-974d-977defdb15af" />
+<img width="755" height="130" alt="Screenshot 2025-11-27 083519" src="https://github.com/user-attachments/assets/4e963860-a18a-4c8d-8bd2-7c108e980f41" />
 
 
-<img width="357" height="179" alt="Screenshot 2025-11-21 133413" src="https://github.com/user-attachments/assets/be279b53-4882-4317-b4db-df5ceb0b82db" />
+<img width="284" height="149" alt="Screenshot 2025-11-27 083527" src="https://github.com/user-attachments/assets/c8f01bf3-e992-4384-a940-0156baa5bf4c" />
 
+
+<img width="344" height="133" alt="Screenshot 2025-11-27 083544" src="https://github.com/user-attachments/assets/7675b73f-7fbe-4bd1-b78e-65643ba84d2a" />
+
+
+<img width="373" height="178" alt="Screenshot 2025-11-27 083558" src="https://github.com/user-attachments/assets/e55ba3a4-182f-4347-b1be-7ab40c74bbab" />
+
+```
 
 ## Result:
 Thus the program to implement the multivariate linear regression model for predicting the price of the house and number of occupants in the house with SGD regressor is written and verified using python programming.
